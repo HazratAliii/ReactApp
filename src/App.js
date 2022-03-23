@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Index from './Event_Handler/index'
+import Inex from './Event_Binding/inex'
+import HookIndex from './Hook_state/index'
+import HookIndex1 from './Hook_state/inex1'
+import Form from './Form/form'
+import ChildComp from './state_lifting/child'
 function App() {
+  const data = "I'm from parent"
+  const handleChildData = (childData) => {
+    console.log(childData);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Index /> 
+      <Inex /> 
+      <HookIndex />
+     <HookIndex1 /> 
+     <Form />  */}
+     <ChildComp data={data} onData = {handleChildData}/>
     </div>
   );
 }
